@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.1
+description: My module
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2010 by Your Company
+
+
+# these should not be edited
+name: ti_textarea_ex
+moduleid: jp.covered
+guid: 8337614f-6cdc-4aab-b223-8f63da5f1bce
+platform: iphone
+minsdk: 1.5.1
