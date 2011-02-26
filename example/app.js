@@ -19,11 +19,11 @@ Ti.API.info("module is => " + TextareaEx);
 Ti.API.info("module exampleProp is => " + TextareaEx.exampleProp);
 TextareaEx.exampleProp = "This is a test value";
 
-var ta = TextareaEx.createTextArea({
+var ta = TextareaEx.createTextField({
     top:15,
     left:15,
+    height:30,
     right:15,
-    height:100,
     borderWidth: 1,
     borderColor: '#555',
     appearance:Ti.UI.KEYBOARD_APPEARANCE_DEFAULT,
@@ -32,6 +32,20 @@ var ta = TextareaEx.createTextArea({
     suppressReturn:false
 
 });
+
+//var ta = TextareaEx.createTextArea({
+//    top:15,
+//    left:15,
+//    right:15,
+//    height:100,
+//    borderWidth: 1,
+//    borderColor: '#555',
+//    appearance:Ti.UI.KEYBOARD_APPEARANCE_DEFAULT,
+//    keyboardType:Ti.UI.KEYBOARD_DEFAULT,
+//    returnKeyType:Ti.UI.RETURNKEY_DEFAULT,
+//    suppressReturn:false
+//
+//});
 
 var leftBtn = Titanium.UI.createButton({
    title: 'Left',
@@ -65,11 +79,20 @@ var undoBtn = Titanium.UI.createButton({
    right: 50
 });
 
+var clearBtn = Titanium.UI.createButton({
+   title: 'Clear',
+   top: 210,
+   height: 30,
+   width: 100,
+   right: 50
+});
+
 window.add(ta);
 window.add(rightBtn);
 window.add(leftBtn);
 window.add(redoBtn);
 window.add(undoBtn);
+window.add(clearBtn);
 
 rightBtn.addEventListener('click',function(e)
 {
@@ -87,6 +110,10 @@ redoBtn.addEventListener('click',function(e)
 undoBtn.addEventListener('click',function(e)
 {
    ta.undo();
+});
+clearBtn.addEventListener('click',function(e)
+{
+   ta.clear();
 });
 
 

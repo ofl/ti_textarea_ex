@@ -4,13 +4,13 @@
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  */
-#import "TiUIView.h"
-#import "TiUITextArea.h"
+#import "TiViewProxy.h"
+#import "TiUITextFieldProxy.h"
 
-@interface JpCoveredTextArea : TiUITextArea {
-	
+@interface JpCoveredTextFieldProxy : TiViewProxy {
+
 @private
-	NSString *lastClearText;	
+
 }
 
 @end

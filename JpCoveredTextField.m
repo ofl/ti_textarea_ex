@@ -5,11 +5,11 @@
  * Please see the LICENSE included with this distribution for details.
  */
 
-#import "JpCoveredTextArea.h"
-#import "JpCoveredTextAreaProxy.h"
+#import "JpCoveredTextField.h"
+#import "JpCoveredTextFieldProxy.h"
 #import "TiUtils.h"
 
-@implementation JpCoveredTextArea
+@implementation JpCoveredTextField
 
 -(void)dealloc
 {
@@ -18,22 +18,6 @@
 		RELEASE_TO_NIL(lastClearText);
 	}
 	[super dealloc];
-}
-
-- (void)cursorLeft
-{
-	NSRange range = [(UITextView *)[self textWidgetView] selectedRange];
-	[(UITextView *)[self textWidgetView] setSelectedRange:NSMakeRange(range.location - 1, range.length)];
-	[[UIDevice currentDevice] playInputClick];
-	[[(UITextView *)[self textWidgetView] undoManager] registerUndoWithTarget:self selector:@selector(cursorRight) object:nil];
-}
-
-- (void)cursorRight
-{
-	NSRange range = [(UITextView *)[self textWidgetView] selectedRange];
-	[(UITextView *)[self textWidgetView] setSelectedRange:NSMakeRange(range.location + 1, range.length)];
-	[[UIDevice currentDevice] playInputClick];
-	[[(UITextView *)[self textWidgetView] undoManager] registerUndoWithTarget:self selector:@selector(cursorLeft) object:nil];
 }
 
 - (void)clear
@@ -60,5 +44,6 @@
 {
 	[[(UITextView *)[self textWidgetView] undoManager] undo];
 }
+
 
 @end

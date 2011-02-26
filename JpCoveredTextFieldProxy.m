@@ -5,27 +5,12 @@
  * Please see the LICENSE included with this distribution for details.
  */
 
-#import "JpCoveredTextAreaProxy.h"
-#import "JpCoveredTextArea.h"
+#import "JpCoveredTextFieldProxy.h"
+#import "JpCoveredTextField.h"
 #import "TiUtils.h"
 
-@implementation JpCoveredTextAreaProxy
+@implementation JpCoveredTextFieldProxy
 
--(void)cursorLeft:(id)arg
-{
-	if ([self viewAttached])
-	{
-		[[self view] performSelectorOnMainThread:@selector(cursorLeft) withObject:nil waitUntilDone:NO];
-	}
-}
-
--(void)cursorRight:(id)arg
-{
-	if ([self viewAttached])
-	{
-		[[self view] performSelectorOnMainThread:@selector(cursorRight) withObject:nil waitUntilDone:NO];
-	}
-}
 
 -(void)clear:(id)arg
 {

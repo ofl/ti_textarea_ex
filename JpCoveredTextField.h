@@ -5,10 +5,10 @@
  * Please see the LICENSE included with this distribution for details.
  */
 #import "TiUIView.h"
-#import "TiUITextArea.h"
+#import "TiUITextField.h"
 
-@interface JpCoveredTextArea : TiUITextArea {
-	
+@interface JpCoveredTextField : TiUITextField {
+
 @private
 	NSString *lastClearText;	
 }
