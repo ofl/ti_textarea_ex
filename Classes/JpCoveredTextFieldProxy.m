@@ -12,6 +12,14 @@
 @implementation JpCoveredTextFieldProxy
 
 
+-(void)clear:(id)arg
+{
+	if ([self viewAttached])
+	{
+		[[self view] performSelectorOnMainThread:@selector(clear) withObject:nil waitUntilDone:NO];
+	}
+}
+
 -(void)undo:(id)arg
 {
 	if ([self viewAttached])

@@ -7,10 +7,10 @@
 #import "TiUIView.h"
 #import "TiUITextField.h"
 
-@interface JpCoveredTextField : TiUIView {
+@interface JpCoveredTextField : TiUITextField {
 
 @private
-
+	NSString *lastClearText;	
 }
 
 @end

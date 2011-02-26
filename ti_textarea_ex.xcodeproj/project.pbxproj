@@ -22,14 +22,14 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		232F02F41318A97D0002F005 /* JpCoveredTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 232F02F31318A97D0002F005 /* JpCoveredTextField.h */; };
+		232F02F61318A9960002F005 /* JpCoveredTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 232F02F51318A9960002F005 /* JpCoveredTextField.m */; };
+		232F02F81318A9A30002F005 /* JpCoveredTextFieldProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 232F02F71318A9A30002F005 /* JpCoveredTextFieldProxy.h */; };
+		232F02FA1318A9C50002F005 /* JpCoveredTextFieldProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 232F02F91318A9C50002F005 /* JpCoveredTextFieldProxy.m */; };
 		233A9F3E12D9694A00214AA8 /* JpCoveredTextArea.h in Headers */ = {isa = PBXBuildFile; fileRef = 233A9F3C12D9694A00214AA8 /* JpCoveredTextArea.h */; };
 		233A9F3F12D9694A00214AA8 /* JpCoveredTextArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 233A9F3D12D9694A00214AA8 /* JpCoveredTextArea.m */; };
 		233A9F4412D9696F00214AA8 /* JpCoveredTextAreaProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 233A9F4212D9696F00214AA8 /* JpCoveredTextAreaProxy.h */; };
 		233A9F4512D9696F00214AA8 /* JpCoveredTextAreaProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 233A9F4312D9696F00214AA8 /* JpCoveredTextAreaProxy.m */; };
-		236D90A912F99AB200D7C5C7 /* JpCoveredTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 236D90A712F99AB200D7C5C7 /* JpCoveredTextField.h */; };
-		236D90AA12F99AB200D7C5C7 /* JpCoveredTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 236D90A812F99AB200D7C5C7 /* JpCoveredTextField.m */; };
-		236D90AD12F99AE500D7C5C7 /* JpCoveredTextFieldProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 236D90AB12F99AE500D7C5C7 /* JpCoveredTextFieldProxy.h */; };
-		236D90AE12F99AE500D7C5C7 /* JpCoveredTextFieldProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 236D90AC12F99AE500D7C5C7 /* JpCoveredTextFieldProxy.m */; };
 		24DD6CF91134B3F500162E58 /* JpCoveredModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DD6CF71134B3F500162E58 /* JpCoveredModule.h */; };
 		24DD6CFA1134B3F500162E58 /* JpCoveredModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* JpCoveredModule.m */; };
 		24DE9E1111C5FE74003F90F6 /* JpCoveredModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* JpCoveredModuleAssets.h */; };
@@ -49,14 +49,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		232F02F31318A97D0002F005 /* JpCoveredTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JpCoveredTextField.h; path = Classes/JpCoveredTextField.h; sourceTree = "<group>"; };
+		232F02F51318A9960002F005 /* JpCoveredTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JpCoveredTextField.m; path = Classes/JpCoveredTextField.m; sourceTree = "<group>"; };
+		232F02F71318A9A30002F005 /* JpCoveredTextFieldProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JpCoveredTextFieldProxy.h; path = Classes/JpCoveredTextFieldProxy.h; sourceTree = "<group>"; };
+		232F02F91318A9C50002F005 /* JpCoveredTextFieldProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JpCoveredTextFieldProxy.m; path = Classes/JpCoveredTextFieldProxy.m; sourceTree = "<group>"; };
 		233A9F3C12D9694A00214AA8 /* JpCoveredTextArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JpCoveredTextArea.h; path = Classes/JpCoveredTextArea.h; sourceTree = "<group>"; };
 		233A9F3D12D9694A00214AA8 /* JpCoveredTextArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JpCoveredTextArea.m; path = Classes/JpCoveredTextArea.m; sourceTree = "<group>"; };
 		233A9F4212D9696F00214AA8 /* JpCoveredTextAreaProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JpCoveredTextAreaProxy.h; path = Classes/JpCoveredTextAreaProxy.h; sourceTree = "<group>"; };
 		233A9F4312D9696F00214AA8 /* JpCoveredTextAreaProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JpCoveredTextAreaProxy.m; path = Classes/JpCoveredTextAreaProxy.m; sourceTree = "<group>"; };
-		236D90A712F99AB200D7C5C7 /* JpCoveredTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JpCoveredTextField.h; sourceTree = "<group>"; };
-		236D90A812F99AB200D7C5C7 /* JpCoveredTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JpCoveredTextField.m; sourceTree = "<group>"; };
-		236D90AB12F99AE500D7C5C7 /* JpCoveredTextFieldProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JpCoveredTextFieldProxy.h; sourceTree = "<group>"; };
-		236D90AC12F99AE500D7C5C7 /* JpCoveredTextFieldProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JpCoveredTextFieldProxy.m; sourceTree = "<group>"; };
 		24DD6CF71134B3F500162E58 /* JpCoveredModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JpCoveredModule.h; path = Classes/JpCoveredModule.h; sourceTree = "<group>"; };
 		24DD6CF81134B3F500162E58 /* JpCoveredModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JpCoveredModule.m; path = Classes/JpCoveredModule.m; sourceTree = "<group>"; };
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
@@ -109,6 +109,10 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				232F02F91318A9C50002F005 /* JpCoveredTextFieldProxy.m */,
+				232F02F71318A9A30002F005 /* JpCoveredTextFieldProxy.h */,
+				232F02F51318A9960002F005 /* JpCoveredTextField.m */,
+				232F02F31318A97D0002F005 /* JpCoveredTextField.h */,
 				24DE9E0F11C5FE74003F90F6 /* JpCoveredModuleAssets.h */,
 				24DE9E1011C5FE74003F90F6 /* JpCoveredModuleAssets.m */,
 				24DD6CF71134B3F500162E58 /* JpCoveredModule.h */,
@@ -117,10 +121,6 @@
 				233A9F3D12D9694A00214AA8 /* JpCoveredTextArea.m */,
 				233A9F4212D9696F00214AA8 /* JpCoveredTextAreaProxy.h */,
 				233A9F4312D9696F00214AA8 /* JpCoveredTextAreaProxy.m */,
-				236D90A712F99AB200D7C5C7 /* JpCoveredTextField.h */,
-				236D90A812F99AB200D7C5C7 /* JpCoveredTextField.m */,
-				236D90AB12F99AE500D7C5C7 /* JpCoveredTextFieldProxy.h */,
-				236D90AC12F99AE500D7C5C7 /* JpCoveredTextFieldProxy.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -146,8 +146,8 @@
 				24DE9E1111C5FE74003F90F6 /* JpCoveredModuleAssets.h in Headers */,
 				233A9F3E12D9694A00214AA8 /* JpCoveredTextArea.h in Headers */,
 				233A9F4412D9696F00214AA8 /* JpCoveredTextAreaProxy.h in Headers */,
-				236D90A912F99AB200D7C5C7 /* JpCoveredTextField.h in Headers */,
-				236D90AD12F99AE500D7C5C7 /* JpCoveredTextFieldProxy.h in Headers */,
+				232F02F41318A97D0002F005 /* JpCoveredTextField.h in Headers */,
+				232F02F81318A9A30002F005 /* JpCoveredTextFieldProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,8 +222,8 @@
 				24DE9E1211C5FE74003F90F6 /* JpCoveredModuleAssets.m in Sources */,
 				233A9F3F12D9694A00214AA8 /* JpCoveredTextArea.m in Sources */,
 				233A9F4512D9696F00214AA8 /* JpCoveredTextAreaProxy.m in Sources */,
-				236D90AA12F99AB200D7C5C7 /* JpCoveredTextField.m in Sources */,
-				236D90AE12F99AE500D7C5C7 /* JpCoveredTextFieldProxy.m in Sources */,
+				232F02F61318A9960002F005 /* JpCoveredTextField.m in Sources */,
+				232F02FA1318A9C50002F005 /* JpCoveredTextFieldProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

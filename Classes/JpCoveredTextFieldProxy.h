@@ -7,7 +7,7 @@
 #import "TiViewProxy.h"
 #import "TiUITextFieldProxy.h"
 
-@interface JpCoveredTextFieldProxy : TiViewProxy {
+@interface JpCoveredTextFieldProxy : TiUITextFieldProxy {
 
 @private
 

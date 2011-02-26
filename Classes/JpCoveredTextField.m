@@ -11,6 +11,29 @@
 
 @implementation JpCoveredTextField
 
+-(void)dealloc
+{
+	if (lastClearText!=nil)
+	{
+		RELEASE_TO_NIL(lastClearText);
+	}
+	[super dealloc];
+}
+
+- (void)clear
+{
+	(NSString *)lastClearText = [[[self textWidgetView] text] copy];
+	[(UITextView *)[self textWidgetView] setText:@""];
+	[[UIDevice currentDevice] playInputClick];
+	[[(UITextView *)[self textWidgetView] undoManager] registerUndoWithTarget:self selector:@selector(restoreText) object:nil];
+}
+
+- (void)restoreText
+{
+	[(UITextView *)[self textWidgetView] setText:lastClearText];
+	[[UIDevice currentDevice] playInputClick];
+	[[(UITextView *)[self textWidgetView] undoManager] registerUndoWithTarget:self selector:@selector(clear) object:nil];
+}
 
 - (void)redo
 {
@@ -21,6 +44,5 @@
 {
 	[[(UITextView *)[self textWidgetView] undoManager] undo];
 }
-
 
 @end
