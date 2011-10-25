@@ -2,3 +2,10 @@ tmp
 bin
 build
 *.zip
+ti_textarea_ex.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+ti_textarea_ex.xcodeproj/project.xcworkspace/xcuserdata/sim.xcuserdatad/UserInterfaceState.xcuserstate
+ti_textarea_ex.xcodeproj/project.xcworkspace/xcuserdata/sim.xcuserdatad/WorkspaceSettings.xcsettings
+ti_textarea_ex.xcodeproj/xcuserdata/sim.xcuserdatad/xcdebugger/Breakpoints.xcbkptlist
+ti_textarea_ex.xcodeproj/xcuserdata/sim.xcuserdatad/xcschemes/Build & Test.xcscheme
+ti_textarea_ex.xcodeproj/xcuserdata/sim.xcuserdatad/xcschemes/ti_textarea_ex.xcscheme
+ti_textarea_ex.xcodeproj/xcuserdata/sim.xcuserdatad/xcschemes/xcschememanagement.plist

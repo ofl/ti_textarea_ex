@@ -67,20 +67,27 @@
 
 -(void)_listenerAdded:(NSString *)type count:(int)count
 {
-	if (count == 1 && [type isEqualToString:@"my_event"])
+	if (count == 1 && [type isEqualToString:@"change"])
 	{
-		// the first (of potentially many) listener is being added 
-		// for event named 'my_event'
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stateDidChange:) name:UIPasteboardChangedNotification object:[UIPasteboard generalPasteboard]];
 	}
 }
 
 -(void)_listenerRemoved:(NSString *)type count:(int)count
 {
-	if (count == 0 && [type isEqualToString:@"my_event"])
+	if (count == 0 && [type isEqualToString:@"change"])
 	{
-		// the last listener called for event named 'my_event' has
-		// been removed, we can optionally clean up any resources
-		// since no body is listening at this point for that event
+		[[NSNotificationCenter defaultCenter] removeObserver:self];
+	}
+}
+
+#pragma mark Notifications
+
+// TODO: Change to KrollCallback properties for faster response times?
+-(void)stateDidChange:(NSNotification*)note
+{
+	if ([self _hasListeners:@"change"]) {
+		[self fireEvent:@"change"];
 	}
 }
 

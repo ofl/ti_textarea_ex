@@ -36,4 +36,11 @@
 	}
 }
 
+-(void)paste:(id)arg
+{
+	if ([self viewAttached])
+	{
+		[[self view] performSelectorOnMainThread:@selector(paste) withObject:nil waitUntilDone:NO];
+	}
+}
 @end

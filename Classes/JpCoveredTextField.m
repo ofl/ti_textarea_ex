@@ -22,7 +22,7 @@
 
 - (void)clear
 {
-	(NSString *)lastClearText = [[[self textWidgetView] text] copy];
+	lastClearText = [[(UITextView *)[self textWidgetView] text] copy];
 	[(UITextView *)[self textWidgetView] setText:@""];
 	[[UIDevice currentDevice] playInputClick];
 	[[(UITextView *)[self textWidgetView] undoManager] registerUndoWithTarget:self selector:@selector(restoreText) object:nil];
@@ -45,4 +45,8 @@
 	[[(UITextView *)[self textWidgetView] undoManager] undo];
 }
 
+- (void)paste
+{
+	[(UITextView *)[self textWidgetView] paste:self];
+}
 @end

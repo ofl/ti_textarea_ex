@@ -19,25 +19,11 @@ Ti.API.info("module is => " + TextareaEx);
 Ti.API.info("module exampleProp is => " + TextareaEx.exampleProp);
 TextareaEx.exampleProp = "This is a test value";
 
-var ta = TextareaEx.createTextField({
-    top:15,
-    left:15,
-    height:30,
-    right:15,
-    borderWidth: 1,
-    borderColor: '#555',
-    appearance:Ti.UI.KEYBOARD_APPEARANCE_DEFAULT,
-    keyboardType:Ti.UI.KEYBOARD_DEFAULT,
-    returnKeyType:Ti.UI.RETURNKEY_DEFAULT,
-    suppressReturn:false
-
-});
-
-//var ta = TextareaEx.createTextArea({
+//var ta = TextareaEx.createTextField({
 //    top:15,
 //    left:15,
+//    height:30,
 //    right:15,
-//    height:100,
 //    borderWidth: 1,
 //    borderColor: '#555',
 //    appearance:Ti.UI.KEYBOARD_APPEARANCE_DEFAULT,
@@ -46,6 +32,20 @@ var ta = TextareaEx.createTextField({
 //    suppressReturn:false
 //
 //});
+
+var ta = TextareaEx.createTextArea({
+    top:15,
+    left:15,
+    right:15,
+    height:100,
+    borderWidth: 1,
+    borderColor: '#555',
+    appearance:Ti.UI.KEYBOARD_APPEARANCE_DEFAULT,
+    keyboardType:Ti.UI.KEYBOARD_DEFAULT,
+    returnKeyType:Ti.UI.RETURNKEY_DEFAULT,
+    suppressReturn:false
+
+});
 
 var leftBtn = Titanium.UI.createButton({
    title: 'Left',
@@ -87,16 +87,25 @@ var clearBtn = Titanium.UI.createButton({
    right: 50
 });
 
+var insBtn = Titanium.UI.createButton({
+   title: 'Insert',
+   top: 210,
+   height: 30,
+   width: 100,
+   left: 50
+});
+
 window.add(ta);
 window.add(rightBtn);
 window.add(leftBtn);
 window.add(redoBtn);
 window.add(undoBtn);
 window.add(clearBtn);
+window.add(insBtn);
 
 rightBtn.addEventListener('click',function(e)
 {
-    ta.cursorRight();
+    ta.paste();
 });
 leftBtn.addEventListener('click',function(e)
 {
@@ -115,6 +124,25 @@ clearBtn.addEventListener('click',function(e)
 {
    ta.clear();
 });
+insBtn.addEventListener('click',function(e)
+{
+//   ta.insertString('abc');
+ta.insertString("ff");
+});
+
+var changeAlert = function(e)
+{
+   alert('Clipboard changed');
+}
+
+ta.addEventListener('keyboardChanged', function(e){
+  Ti.API.info('keyboardChanged aa');
+  Ti.API.info(e.type);
+  Ti.API.info(e.kbHeight);
+});
+
+TextareaEx.addEventListener('change', changeAlert);
+//TextareaEx.removeEventListener('change', changeAlert);
 
 
 window.open();

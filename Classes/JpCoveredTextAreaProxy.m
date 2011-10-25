@@ -27,6 +27,15 @@
 	}
 }
 
+-(void)insertString:(id)arg
+{
+	if ([self viewAttached])
+	{
+		[[self view] performSelectorOnMainThread:@selector(insertString:) withObject:[TiUtils stringValue:[arg objectAtIndex:0]] waitUntilDone:NO];
+//		[[self view] performSelectorOnMainThread:@selector(insertString:) withObject:text waitUntilDone:NO];
+	}
+}
+
 -(void)clear:(id)arg
 {
 	if ([self viewAttached])
@@ -48,6 +57,14 @@
 	if ([self viewAttached])
 	{
 		[[self view] performSelectorOnMainThread:@selector(redo) withObject:nil waitUntilDone:NO];
+	}
+}
+
+-(void)paste:(id)arg
+{
+	if ([self viewAttached])
+	{
+		[[self view] performSelectorOnMainThread:@selector(paste) withObject:nil waitUntilDone:NO];
 	}
 }
 
