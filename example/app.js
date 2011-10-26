@@ -2,7 +2,7 @@ var window = Ti.UI.createWindow({
 	backgroundColor:'white'
 });
 
-var TextareaEx = require('jp.covered');
+var ti_textarea_ex = require('jp.covered');
 
 //var ta = TextareaEx.createTextField({
 //    top:15,
@@ -18,7 +18,7 @@ var TextareaEx = require('jp.covered');
 //
 //});
 
-var ta = TextareaEx.createTextArea({
+var ta = ti_textarea_ex.createTextArea({
     top:15,
     left:15,
     right:15,

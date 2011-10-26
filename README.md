@@ -40,7 +40,7 @@
 
 ### Events
 
-通常のイベントに追加してテキストエリアのみ
+通常のテキストフィールドのイベント加えてテキストエリアのみキーボードのフレームのサイズの変化を受け取る(iOS5のみ)。
 
 	keyboardChanged	
 		fired when the keyboard type changed
@@ -48,21 +48,21 @@
 		Event properties
 			source
 			type
-			kbHeight	キーボードの高さ
-			kbWidth	キーボードのよこ幅
+			kbHeight	//キーボードの高さ
+			kbWidth  	//キーボードのよこ幅
 			
 ## Install
 
 ターミナルで以下のコマンドを実行
 
-	`python build.py && unzip jp.covered-iphone-0.1.zip -d /Library/Application＼ Support/Titanium/`
+	`python build.py && unzip jp.covered-iphone-0.1.zip -d /Library/Application\ Support/Titanium/`
 
 もしくは
 
 	`python build.py`
 	 
 で作成されたjp.covered-iphone-0.1.zipを解凍して
-Support/Titanium/modules/iphoneに手動でコピー
+/Library/Application\ Support/Titanium/modules/iphoneに手動でコピー
 
 ## Usage
 
