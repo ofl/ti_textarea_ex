@@ -2,7 +2,7 @@
 
 ## Description
 
-ƒeƒLƒXƒgƒGƒŠƒA‚ÆƒeƒLƒXƒgƒtƒB[ƒ‹ƒh‚Ì‹@”\‚ğŠg’£‚·‚éTitanium mobileƒ‚ƒWƒ…[ƒ‹(iOS—p)
+ãƒ†ã‚­ã‚¹ãƒˆã‚¨ãƒªã‚¢ã¨ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®æ©Ÿèƒ½ã‚’æ‹¡å¼µã™ã‚‹Titanium mobileãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«(iOSç”¨)
 
 ## Accessing the ti_textarea_ex Module
 
@@ -17,21 +17,21 @@
 		//options	
 	});
 
-ƒIƒvƒVƒ‡ƒ“‚Í’Êí‚ÌƒeƒLƒXƒgƒtƒB[ƒ‹ƒh‚âƒeƒLƒXƒgƒtƒB[ƒ‹ƒh‚Æ“¯‚¶B
+ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã¯é€šå¸¸ã®ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã‚„ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã¨åŒã˜ã€‚
 
 ## Reference
 
 
 ### ___PROJECTNAMEASIDENTIFIER__.function
 
-‹¤’Ê
+å…±é€š
 
 	clear()
 	undo()
 	redo()
 	paste()
 
-ƒeƒLƒXƒgƒGƒŠƒA‚Ì‚İ
+ãƒ†ã‚­ã‚¹ãƒˆã‚¨ãƒªã‚¢ã®ã¿
 
 	cursorLeft()
 	cursorRight()
@@ -40,7 +40,7 @@
 
 ### Events
 
-’Êí‚ÌƒCƒxƒ“ƒg‚É’Ç‰Á‚µ‚ÄƒeƒLƒXƒgƒGƒŠƒA‚Ì‚İ
+é€šå¸¸ã®ã‚¤ãƒ™ãƒ³ãƒˆã«è¿½åŠ ã—ã¦ãƒ†ã‚­ã‚¹ãƒˆã‚¨ãƒªã‚¢ã®ã¿
 
 	keyboardChanged	
 		fired when the keyboard type changed
@@ -48,25 +48,25 @@
 		Event properties
 			source
 			type
-			kbHeight	ƒL[ƒ{[ƒh‚Ì‚‚³
-			kbWidth	ƒL[ƒ{[ƒh‚Ì‚æ‚±•
+			kbHeight	ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã®é«˜ã•
+			kbWidth	ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã®ã‚ˆã“å¹…
 			
 ## Install
 
-ƒ^[ƒ~ƒiƒ‹‚ÅˆÈ‰º‚ÌƒRƒ}ƒ“ƒh‚ğÀs
+ã‚¿ãƒ¼ãƒŸãƒŠãƒ«ã§ä»¥ä¸‹ã®ã‚³ãƒãƒ³ãƒ‰ã‚’å®Ÿè¡Œ
 
-	`python build.py && unzip jp.covered-iphone-0.1.zip -d /Library/Application_ Support/Titanium/`
+	`python build.py && unzip jp.covered-iphone-0.1.zip -d /Library/Applicationï¼¼ Support/Titanium/`
 
-‚à‚µ‚­‚Í
+ã‚‚ã—ãã¯
 
 	`python build.py`
 	 
-‚Åì¬‚³‚ê‚½jp.covered-iphone-0.1.zip‚ğ‰ğ“€‚µ‚Ä
-Support/Titanium/modules/iphone‚Éè“®‚ÅƒRƒs[
+ã§ä½œæˆã•ã‚ŒãŸjp.covered-iphone-0.1.zipã‚’è§£å‡ã—ã¦
+Support/Titanium/modules/iphoneã«æ‰‹å‹•ã§ã‚³ãƒ”ãƒ¼
 
 ## Usage
 
-tiapp.xml‚Ìƒ‚ƒWƒ…[ƒ‹‚Ì€–Ú‚É’Ç‰Á
+tiapp.xmlã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®é …ç›®ã«è¿½åŠ 
 
 	<modules>
 		<module version="0.1">jp.covered</module>
