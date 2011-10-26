@@ -1,23 +1,8 @@
-// This is a test harness for your module
-// You should do something interesting in this harness
-// to test out the module and to provide instructions
-// to users on how to use it by example.
-
-
-// open a single window
 var window = Ti.UI.createWindow({
 	backgroundColor:'white'
 });
-//var label = Ti.UI.createLabel();
-//window.add(label);
-
-// TODO: write your module tests here
 
 var TextareaEx = require('jp.covered');
-
-Ti.API.info("module is => " + TextareaEx);
-Ti.API.info("module exampleProp is => " + TextareaEx.exampleProp);
-TextareaEx.exampleProp = "This is a test value";
 
 //var ta = TextareaEx.createTextField({
 //    top:15,
@@ -105,7 +90,7 @@ window.add(insBtn);
 
 rightBtn.addEventListener('click',function(e)
 {
-    ta.paste();
+   ta.cursorRight();
 });
 leftBtn.addEventListener('click',function(e)
 {
@@ -114,7 +99,7 @@ leftBtn.addEventListener('click',function(e)
 
 redoBtn.addEventListener('click',function(e)
 {
-    ta.redo();
+   ta.redo();
 });
 undoBtn.addEventListener('click',function(e)
 {
@@ -122,32 +107,18 @@ undoBtn.addEventListener('click',function(e)
 });
 clearBtn.addEventListener('click',function(e)
 {
-   ta.clear();
+    ta.clear();
 });
 insBtn.addEventListener('click',function(e)
 {
-//   ta.insertString('abc');
-ta.insertString("ff");
+   ta.insertString("Text inserted");
 });
-
-var changeAlert = function(e)
-{
-   alert('Clipboard changed');
-}
 
 ta.addEventListener('keyboardChanged', function(e){
-  Ti.API.info('keyboardChanged aa');
-  Ti.API.info(e.type);
-  Ti.API.info(e.kbHeight);
+   Ti.API.info(e.type);
+   Ti.API.info(e.kbHeight);
 });
-
-TextareaEx.addEventListener('change', changeAlert);
-//TextareaEx.removeEventListener('change', changeAlert);
-
 
 window.open();
 
-if (Ti.Platform.name == "android") {
-	var proxy = TextareaEx.createExample({message: "Creating an example Proxy"});
-	proxy.printMessage("Hello world!");
-}
+
