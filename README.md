@@ -22,27 +22,33 @@
 ## Reference
 
 
-### ___PROJECTNAMEASIDENTIFIER__.function
+### function
 
 共通
 
-	clear()
-	undo()
-	redo()
-	paste()
+	[textfield/textarea].clear()
+	[textfield/textarea].undo()
+	[textfield/textarea].redo()
+	[textfield/textarea].paste()
 
 テキストエリアのみ
 
-	cursorLeft()
-	cursorRight()
-	insertString(text)
+	[textarea].cursorLeft()
+	[textarea].cursorRight()
+	[textarea].insertString(text)
 
 
 ### Events
 
-通常のテキストフィールドのイベント加えてテキストエリアのみキーボードのフレームのサイズの変化を受け取る(iOS5のみ)。
+キーボードの表示・非表示時を通知（UIに依存するfocus,blurと違いWebViewのフォームでキーボードが表示された時にも通知を受け取る）。
 
-	keyboardChanged	
+	keyboardDidShow
+	keyboardDidHide
+
+
+キーボードのフレームのサイズの変化を受け取る(iOS5のみ)。
+
+	[textarea]keyboardChanged	
 		fired when the keyboard type changed
 		
 		Event properties

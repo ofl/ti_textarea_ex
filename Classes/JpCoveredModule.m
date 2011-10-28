@@ -69,7 +69,18 @@
 {
 	if (count == 1 && [type isEqualToString:@"change"])
 	{
+		WARN_IF_BACKGROUND_THREAD_OBJ;	//NSNotificationCenter is not threadsafe
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stateDidChange:) name:UIPasteboardChangedNotification object:[UIPasteboard generalPasteboard]];
+	}
+	if (count == 1 && [type isEqualToString:@"keyboardDidShow"])
+	{
+		WARN_IF_BACKGROUND_THREAD_OBJ;	//NSNotificationCenter is not threadsafe
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+	}
+	if (count == 1 && [type isEqualToString:@"keyboardDidHide"])
+	{
+		WARN_IF_BACKGROUND_THREAD_OBJ;	//NSNotificationCenter is not threadsafe
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
 	}
 }
 
@@ -77,6 +88,17 @@
 {
 	if (count == 0 && [type isEqualToString:@"change"])
 	{
+		WARN_IF_BACKGROUND_THREAD_OBJ;	//NSNotificationCenter is not threadsafe
+		[[NSNotificationCenter defaultCenter] removeObserver:self];
+	}
+	if (count == 0 && [type isEqualToString:@"keyboardshow"])
+	{
+		WARN_IF_BACKGROUND_THREAD_OBJ;	//NSNotificationCenter is not threadsafe
+		[[NSNotificationCenter defaultCenter] removeObserver:self];
+	}
+	if (count == 0 && [type isEqualToString:@"keyboardhide"])
+	{
+		WARN_IF_BACKGROUND_THREAD_OBJ;	//NSNotificationCenter is not threadsafe
 		[[NSNotificationCenter defaultCenter] removeObserver:self];
 	}
 }
@@ -91,23 +113,21 @@
 	}
 }
 
+-(void)keyboardDidShow:(NSNotification*)note
+{
+	if ([self _hasListeners:@"keyboardDidShow"]) {
+		[self fireEvent:@"keyboardDidShow"];
+	}
+}
+
+-(void)keyboardDidHide:(NSNotification*)note
+{
+	if ([self _hasListeners:@"keyboardDidHide"]) {
+		[self fireEvent:@"keyboardDidHide"];
+	}
+}
+
 #pragma Public APIs
 
--(id)example:(id)args
-{
-	// example method
-	return @"hello world";
-}
-
--(id)exampleProp
-{
-	// example property getter
-	return @"hello world";
-}
-
--(void)exampleProp:(id)value
-{
-	// example property setter
-}
 
 @end

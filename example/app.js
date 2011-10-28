@@ -119,6 +119,14 @@ ta.addEventListener('keyboardChanged', function(e){
    Ti.API.info(e.kbHeight);
 });
 
+ti_textarea_ex.addEventListener('keyboardDidShow', function(e){
+   Ti.API.info('Keyboard did show');
+});
+
+ti_textarea_ex.addEventListener('keyboardDidHide', function(e){
+   Ti.API.info('Keyboard did hide');
+});
+
 window.open();
 
 
