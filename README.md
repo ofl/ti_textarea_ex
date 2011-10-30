@@ -43,7 +43,20 @@
 キーボードの表示・非表示時を通知（UIに依存するfocus,blurと違いWebViewのフォームでキーボードが表示された時にも通知を受け取る）。
 
 	keyboardDidShow
+		fired when the keyboard did show
+		
+		Event properties
+			source
+			type
+			kbHeight	//キーボードの高さ
+			kbWidth  	//キーボードのよこ幅
+			
 	keyboardDidHide
+		fired when the keyboard did hide
+		
+		Event properties
+			source
+			type
 
 
 キーボードのフレームのサイズの変化を受け取る(iOS5のみ)。

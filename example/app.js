@@ -116,15 +116,16 @@ insBtn.addEventListener('click',function(e)
 
 ta.addEventListener('keyboardChanged', function(e){
    Ti.API.info(e.type);
-   Ti.API.info(e.kbHeight);
+   Ti.API.info('Keyboard height' + e.kbHeight);
 });
 
 ti_textarea_ex.addEventListener('keyboardDidShow', function(e){
-   Ti.API.info('Keyboard did show');
+   Ti.API.info(e.type);
+   Ti.API.info('Keyboard height' + e.kbHeight);
 });
 
 ti_textarea_ex.addEventListener('keyboardDidHide', function(e){
-   Ti.API.info('Keyboard did hide');
+   Ti.API.info(e.type);
 });
 
 window.open();

@@ -86,9 +86,7 @@
 
 -(void)keyboardChanged:(NSNotification *)notification;
 {
-    NSDictionary *info = [notification userInfo];
-    NSValue *keyValue = [info objectForKey:UIKeyboardFrameEndUserInfoKey];
-    CGSize keyboardSize = [keyValue CGRectValue].size;
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
 	NSDictionary *event = [NSDictionary dictionaryWithObjectsAndKeys:
 						   [NSNumber numberWithFloat:keyboardSize.height],@"kbHeight",
 						   [NSNumber numberWithFloat:keyboardSize.width],@"kbWidth",
@@ -100,12 +98,11 @@
 
 -(void)textWidget:(UIView<UITextInputTraits>*)tw didFocusWithText:(NSString *)value
 {
-	TiViewProxy * ourProxy = (TiViewProxy *)[self proxy];
-	[[TiApp controller] didKeyboardFocusOnProxy:ourProxy];
+	[[TiApp controller] didKeyboardFocusOnProxy:self.proxy];
     
-	if ([ourProxy _hasListeners:@"focus"])
+	if ([self.proxy _hasListeners:@"focus"])
 	{
-		[ourProxy fireEvent:@"focus" withObject:[NSDictionary dictionaryWithObject:value forKey:@"value"] propagate:NO];
+		[self.proxy fireEvent:@"focus" withObject:[NSDictionary dictionaryWithObject:value forKey:@"value"] propagate:NO];
 	}    
 	if ([self.proxy _hasListeners:@"keyboardChanged"])
 	{
@@ -115,14 +112,12 @@
 }
 
 -(void)textWidget:(UIView<UITextInputTraits>*)tw didBlurWithText:(NSString *)value
-{
-	TiViewProxy * ourProxy = (TiViewProxy *)[self proxy];
+{    
+	[[TiApp controller] didKeyboardBlurOnProxy:self.proxy];
     
-	[[TiApp controller] didKeyboardBlurOnProxy:ourProxy];
-    
-	if ([ourProxy _hasListeners:@"blur"])
+	if ([self.proxy _hasListeners:@"blur"])
 	{
-		[ourProxy fireEvent:@"blur" withObject:[NSDictionary dictionaryWithObject:value forKey:@"value"] propagate:NO];
+		[self.proxy fireEvent:@"blur" withObject:[NSDictionary dictionaryWithObject:value forKey:@"value"] propagate:NO];
 	}
 	
 	// In order to capture gestures properly, we need to force the root view to become the first responder.

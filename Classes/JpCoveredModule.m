@@ -91,12 +91,12 @@
 		WARN_IF_BACKGROUND_THREAD_OBJ;	//NSNotificationCenter is not threadsafe
 		[[NSNotificationCenter defaultCenter] removeObserver:self];
 	}
-	if (count == 0 && [type isEqualToString:@"keyboardshow"])
+	if (count == 0 && [type isEqualToString:@"keyboardDidshow"])
 	{
 		WARN_IF_BACKGROUND_THREAD_OBJ;	//NSNotificationCenter is not threadsafe
 		[[NSNotificationCenter defaultCenter] removeObserver:self];
 	}
-	if (count == 0 && [type isEqualToString:@"keyboardhide"])
+	if (count == 0 && [type isEqualToString:@"keyboardDidhide"])
 	{
 		WARN_IF_BACKGROUND_THREAD_OBJ;	//NSNotificationCenter is not threadsafe
 		[[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -116,7 +116,12 @@
 -(void)keyboardDidShow:(NSNotification*)note
 {
 	if ([self _hasListeners:@"keyboardDidShow"]) {
-		[self fireEvent:@"keyboardDidShow"];
+        CGSize keyboardSize = [[[note userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+        NSDictionary *event = [NSDictionary dictionaryWithObjectsAndKeys:
+                               [NSNumber numberWithFloat:keyboardSize.height],@"kbHeight",
+                               [NSNumber numberWithFloat:keyboardSize.width],@"kbWidth",
+                               nil];    
+		[self fireEvent:@"keyboardDidShow" withObject:event propagate:NO];
 	}
 }
 
